@@ -25,3 +25,25 @@ body {
     text-wrap: balance;
   }
 }
+
+.navLink {
+  position: relative;
+  display: inline-block;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: currentColor;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.navLink:hover::after {
+  visibility: visible;
+  width: 100%;
+}
